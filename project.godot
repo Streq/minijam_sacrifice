@@ -78,6 +78,10 @@ config/name="minijam-110-sacrifice"
 run/main_scene="res://src/main.tscn"
 config/icon="res://assets/texture/icon.png"
 
+[display]
+
+window/size/height=608
+
 [physics]
 
 common/enable_pause_aware_picking=true
