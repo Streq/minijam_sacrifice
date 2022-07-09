@@ -10,3 +10,8 @@ static func get_dist_to_mouse(node:CanvasItem) -> Vector2:
 	var mouse_viewport_position := node.get_viewport().get_mouse_position()
 	var node_viewport_position := node.get_global_transform_with_canvas().origin
 	return mouse_viewport_position-node_viewport_position
+
+
+static func get_global_mouse_position(viewport:Viewport) -> Vector2:
+	return viewport.global_canvas_transform.xform(viewport.get_mouse_position())
+	

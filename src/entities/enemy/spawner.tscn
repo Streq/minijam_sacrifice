@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/entities/enemy/spawner.gd" type="Script" id=1]
+[ext_resource path="res://src/entities/enemy/enemy.tscn" type="PackedScene" id=2]
+
+[node name="spawner" type="PathFollow2D"]
+position = Vector2( -16, 288 )
+script = ExtResource( 1 )
+SPAWN = ExtResource( 2 )
+
+[node name="timer" type="Timer" parent="."]
+process_mode = 0
+
+[node name="start_timer" type="Timer" parent="."]
+process_mode = 0
