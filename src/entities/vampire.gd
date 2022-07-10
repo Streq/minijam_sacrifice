@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+signal health_changed(val,max_val)
 
 export var speed := 100.0
 export var RAY : PackedScene
@@ -19,7 +20,7 @@ var can_shoot = true
 
 func _ready():
 	ray_cooldown.connect("timeout",self,"cooldown_over")
-
+	set_health(health)
 
 func cooldown_over():
 	can_shoot = true

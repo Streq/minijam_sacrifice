@@ -15,14 +15,14 @@ onready var can_take_cooldown = $can_take_cooldown
 var with_princess = false
 var princess = null
 var can_take_princess = true
-
+var can_move = true
 
 
 func _ready():
 	set_health(health)
 
 func _physics_process(delta):
-	var move = speed*delta*Bool.sign(!go_forward)
+	var move = speed*delta*Bool.sign(!go_forward)*float(can_move)
 	offset += move
 #	print (offset)
 	if unit_offset == 1.0 or with_princess:

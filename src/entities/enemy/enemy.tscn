@@ -15,7 +15,6 @@ anti_aliasing = false
 extents = Vector2( 8, 8 )
 
 [node name="enemy" type="PathFollow2D"]
-position = Vector2( -16, 288 )
 rotate = false
 cubic_interp = false
 loop = false
